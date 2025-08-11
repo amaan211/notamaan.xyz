@@ -1,0 +1,49 @@
+baseURL = 'https://www.notamaan.xyz/'
+languageCode = 'en-us'
+title = 'notamaan.xyz'
+theme = "PaperMod"
+
+
+[params]
+  # Enable profile homepage
+  homeInfoMode = true
+  defaultTheme = "dark"  # or "dark", "auto"
+
+  # Profile settings
+  [params.homeInfoParams]
+    title = "Amaan Khan"
+    content = "Cybersecurity engineer with an unending curiosity for all things tech ( -_•)︻デ═一"
+    avatarURL = "images/avatar.png"  # Place in `assets/images/`
+
+  # Social links (HTB, LinkedIn, Email, etc.)
+  [[params.socialIcons]]
+    name = "linkedin"
+    url = "https://www.linkedin.com/in/amaan-khan-16a9a71b9/"
+
+  [[params.socialIcons]]
+    name = "github"
+    url = "https://github.com/amaan211"
+
+  [[params.socialIcons]]
+    name = "email"
+    url = "mailto:khanamaan827@gmail.com"
+
+  # Custom HackTheBox icon (requires adding an SVG)
+  [[params.socialIcons]]
+    name = "hackthebox"  # Must match your SVG filename (htb.svg)
+    url = "https://app.hackthebox.com/profile/1601743"
+
+
+[[menu.main]]
+  name = "Resume"
+  url = "/resume.pdf"
+  weight = 1
+
+[[menu.main]]
+  name = "Blog"
+  url = "/posts/"
+  weight = 2
+
+
+[outputs]
+home = ["HTML", "RSS"]
