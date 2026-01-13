@@ -1,11 +1,11 @@
 +++
 date = '2025-08-13T14:22:03Z'
 draft = false
-title = 'My Experience with OSCP'
+title = 'My Experience with OSCP 🐉'
 +++
 
 ### Disclaimer ⚠️
-Hi guys, This is going to be the first post on my website and I am not really used to writing long blog posts so please excuse my wrtiting style which may come off as a bit rough around the edges.
+Hi guys, This is going to be the first post on my website and I am not really used to writing long blog posts so please excuse my writing style which may come off as a bit rough around the edges.
 
 ![OSCP-cert](/my-oscp-experience/cert.png)
 
@@ -160,7 +160,7 @@ I did some research and found that the OffSec course material was not quite suff
 
 These were the modules I studied by topic:
 1. ##### Active Directory
-2. ##### Web Appplications
+2. ##### Web Applications
     - Command Injections
     - XSS
     - File Inclusion
@@ -189,7 +189,7 @@ Finally, I sat for the exam at 9 am in the morning and decided to start with AD 
 
 When I came back, I decided to forget everything I had done and start the exam all over again. This time, I pwned the first AD box within 30 minutes and after that, it was like a domino effect. By 4 PM, I had completed the entire AD challenge and took a 30 minute break.
 
-After coming back, I started with the standalones. To my surprise, I was able to pwn the first standalone withing the next 40 minutes. The second standalone took me some time but by 9 PM (exactly 12 hours after I started), I had 80 points in the bag which was enough to pass. I made a couple of failed attempts to complete the third standalone after another 30 minute break but I could not crack it because I was feeling very sleepy by that time. I decided to call it a day and went to sleep at about 11:30 PM and woke up at 5 AM to have one last crack at the last standalone. No luck. This was when I decided to re-solve all the completed boxes and take any screenshots I may have missed. Finally ended the exam by 8 am and started working on the report.
+After coming back, I started with the standalones. To my surprise, I was able to pwn the first standalone within the next 40 minutes. The second standalone took me some time but by 9 PM (exactly 12 hours after I started), I had 80 points in the bag which was enough to pass. I made a couple of failed attempts to complete the third standalone after another 30 minute break but I could not crack it because I was feeling very sleepy by that time. I decided to call it a day and went to sleep at about 11:30 PM and woke up at 5 AM to have one last crack at the last standalone. No luck. This was when I decided to re-solve all the completed boxes and take any screenshots I may have missed. Finally ended the exam by 8 am and started working on the report.
 
 ![exam](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExbno0YTZnMHVlcDEyYmRuczBrc2E4ZWoyMHIyNWp6eWc4ZzV2MHVxeiZlcD12MV9naWZzX3NlYXJjaCZjdD1n/JIX9t2j0ZTN9S/giphy.gif)
 
