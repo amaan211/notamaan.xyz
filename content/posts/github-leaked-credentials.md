@@ -4,16 +4,16 @@ draft = false
 title = '🕵️ Hunting for Leaked Secrets on Github (I Used AI) 🤖'
 +++
 
-## Disclaimer ⚠️  
+## Disclaimer
 The research presented is purely for educational purposes on already-public data and must not be used to attempt unauthorized access.
 
 ## Introduction
 
-Now that I got you to click on the article by putting **"AI"** 🤖 in the title, here is what I did.
+Now that I got you to click on the article by putting **"AI"** in the title, here is what I did.
 
-[Gharchive](https://www.gharchive.org/) is a website that basically creates frequent snapshots of all the public code pushed to github 🐙. Think of "[The Wayback Machine](https://web.archive.org/)" from archive.org but for github.
+[Gharchive](https://www.gharchive.org/) is a website that basically creates frequent snapshots of all the public code pushed to github. Think of "[The Wayback Machine](https://web.archive.org/)" from archive.org but for github.
 
-When I first heard about [gharchive](https://www.gharchive.org/), I remember that the first thought that popped into my head was that it was such a cool initiative and could serve as a very useful archive. My second thought was "oh my god 😈 we can use it to look for juicy information like credentials 🔑 and API keys 🔐".
+When I first heard about [gharchive](https://www.gharchive.org/), I remember that the first thought that popped into my head was that it was such a cool initiative and could serve as a very useful archive. My second thought was "oh my god  we can use it to look for juicy information like credentials and API keys".
 
 
 ![plan](/github-leaked-credentials/cunning-plan.png)
@@ -22,19 +22,19 @@ When I first heard about [gharchive](https://www.gharchive.org/), I remember tha
 
 ### gharchive snapshots can be used for the following:
 
-- see public github events (commits, pushes and issues on public repos) 🐙
+- see public github events (commits, pushes and issues on public repos)
 - diffs in pushes
 - comments on public repos etc.
 
 ### what we cant see:
 
-- private repos 🔒
+- private repos
 - deleted commits
 - files not in commit diffs (large files)
 
 So the idea was to create a script that would download data for a specific date using the gharchive api and then use the github api to look at the committed code. I then parse this commit to look for leaked credentials using simple regex and write the "hits" to a file.
 
-Problem is, the first time I ran the script, I got like 40k hits for leaked creds 😬 most of which (i'd say about 99.9%) were false positives:
+Problem is, the first time I ran the script, I got like 40k hits for leaked creds most of which (i'd say about 99.9%) were false positives:
 - default passwords
 - fields like "password:\<enter-strong-password-here\>"
 - locally hosted stuff which cant be accessed from the internet
@@ -64,7 +64,7 @@ sample output:
 
 ## The solution 💡
 
-As I mentioned earlier, "AI" seems to be the buzzword nowadays 🤖. People are shoving AI into products where it doesnt belong. 
+As I mentioned earlier, "AI" seems to be the buzzword nowadays. People are shoving AI into products where it doesnt belong. 
 
 **Exhibit A:** This Oral B [toothbrush](https://www.oralb.co.uk/en-gb/product-collections/genius-x) that has fricking AI like what???????? why would anyone want AI in their fucking toothbrush?? But I digress.
 
@@ -110,29 +110,29 @@ Respond with ONLY: REAL_SECRET or FALSE_POSITIVE
 ```
 
 ### 🚨 The most important bit
-I also gave the model **context** (few lines of code before and after the leaked credentials) that would help it judge better. This greatly helped the model understand the context behind the code and reduced FPs massively. ✅
+I also gave the model **context** (few lines of code before and after the leaked credentials) that would help it judge better. This greatly helped the model understand the context behind the code and reduced FPs massively.
 
-The script wrote the true positives according to the model in a file (around 400) 📄 which I could investigate individually.
+The script wrote the true positives according to the model in a file (around 400) which I could investigate individually.
 
-I also added some extra logic to avoid bots and spam 🛡️ which were messing up my results.
+I also added some extra logic to avoid bots and spam which were messing up my results.
 
-After doing this for a while, here is what I found 🔍:
+After doing this for a while, here is what I found:
 
 ![nuke](/github-leaked-credentials/nuke.png)
 
 ## 💣 The bombshell
 
-**I found someone's phone number, paypal client ID and client secret! all in plaintext!** 🔓
+**I found someone's phone number, paypal client ID and client secret! all in plaintext!**
 
 ![image-1](/github-leaked-credentials/image-1.png)
 
-Judging from the context, It looked like the person was a developer and had integrated paypal to a website they were working on. 👨‍💻
+Judging from the context, It looked like the person was a developer and had integrated paypal to a website they were working on. 
 
 
 
 ## 😱 No Way
 
-Now, Looking at the [Paypal developer API documentation](https://developer.paypal.com/api/rest/), I could have enumerated lot of information like receipts, disputes, products, etc. using the given credentials. 📊
+Now, Looking at the [Paypal developer API documentation](https://developer.paypal.com/api/rest/), I could have enumerated lot of information like receipts, disputes, products, etc. using the given credentials.
 
 A few sample images taken from a test account I made:
 
@@ -142,9 +142,9 @@ A few sample images taken from a test account I made:
 ![image-5](/github-leaked-credentials/image-5.png)
 ![image-6](/github-leaked-credentials/image-6.png)
 
-Since there were write perms to all of this data, creating fake receipts/invoices and adding random products to the account was also a possibility. ⚠️
+Since there were write perms to all of this data, creating fake receipts/invoices and adding random products to the account was also a possibility. 
 
-Fortunately, the token did not have enough permissions to enumerate or modify customer information like addresses, payment details etc. Still, this is a pretty serious issue that can lead to all sorts of trouble. 😅
+Fortunately, the token did not have enough permissions to enumerate or modify customer information like addresses, payment details etc. Still, this is a pretty serious issue that can lead to all sorts of trouble. 
 
 sample image:
 ![image-7](/github-leaked-credentials/image-7.png)

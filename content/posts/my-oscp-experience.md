@@ -4,7 +4,7 @@ draft = false
 title = 'My Experience with OSCP 🐉'
 +++
 
-### Disclaimer ⚠️
+### Disclaimer
 Hi guys, This is going to be the first post on my website and I am not really used to writing long blog posts so please excuse my writing style which may come off as a bit rough around the edges.
 
 ![OSCP-cert](/my-oscp-experience/cert.png)

@@ -34,10 +34,10 @@ theme = "PaperMod"
     url = "https://app.hackthebox.com/profile/1601743"
 
 
-[[menu.main]]
-  name = "Resume"
-  url = "/resume.pdf"
-  weight = 1
+#[[menu.main]]
+#  name = "Resume"
+#  url = "/resume.pdf"
+# weight = 1
 
 [[menu.main]]
   name = "Blog"
