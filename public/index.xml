@@ -1,8 +1,14 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>notamaan.xyz</title><link>https://www.notamaan.xyz/</link><description>Recent content on notamaan.xyz</description><generator>Hugo -- 0.148.1</generator><language>en-us</language><lastBuildDate>Sat, 24 Jan 2026 14:22:03 +0000</lastBuildDate><atom:link href="https://www.notamaan.xyz/index.xml" rel="self" type="application/rss+xml"/><item><title>Hacking my Router to Steal Credentials</title><link>https://www.notamaan.xyz/posts/hacking-my-router/</link><pubDate>Sat, 24 Jan 2026 14:22:03 +0000</pubDate><guid>https://www.notamaan.xyz/posts/hacking-my-router/</guid><description>&lt;hr>
-&lt;h2 id="introduction">introduction&lt;/h2>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>notamaan.xyz</title><link>https://www.notamaan.xyz/</link><description>Recent content on notamaan.xyz</description><generator>Hugo -- 0.148.1</generator><language>en-us</language><lastBuildDate>Sat, 24 Jan 2026 14:22:03 +0000</lastBuildDate><atom:link href="https://www.notamaan.xyz/index.xml" rel="self" type="application/rss+xml"/><item><title>🛠️ Hacking My Router for Fun and Profit 💰</title><link>https://www.notamaan.xyz/posts/hacking-my-router/</link><pubDate>Sat, 24 Jan 2026 14:22:03 +0000</pubDate><guid>https://www.notamaan.xyz/posts/hacking-my-router/</guid><description>&lt;hr>
+&lt;h2 id="introduction-">introduction 👋&lt;/h2>
 &lt;p>hi guys, I am back with another exciting blog.&lt;/p>
+&lt;p>our objectives for today:&lt;/p>
+&lt;ul>
+&lt;li>root password&lt;/li>
+&lt;li>WPA2 password&lt;/li>
+&lt;li>web interface password&lt;/li>
+&lt;/ul>
 &lt;p>so recently I have been reading and watching a lot of videos on IoT hacking. An amazing channel for me is &lt;a href="https://www.youtube.com/@mattbrwn">matt brown&amp;rsquo;s channel&lt;/a>. He has a lot of good videos on how to get started and goes into quite a bit of depth.&lt;/p>
-&lt;p>after learning from all these resources, I decided to buy a cheap kit from temu and a cheap target router to get started with my IoT hacking journey.&lt;/p></description></item><item><title>🧑‍💻Learning C2 with Sliver🛰️</title><link>https://www.notamaan.xyz/posts/exploring-c2-with-sliver/</link><pubDate>Thu, 15 Jan 2026 14:22:03 +0000</pubDate><guid>https://www.notamaan.xyz/posts/exploring-c2-with-sliver/</guid><description>&lt;hr>
+&lt;p>after learning from all these resources, I decided to buy a cheap kit from temu and a cheap target router to get started with IoT hacking.&lt;/p></description></item><item><title>🧑‍💻Learning C2 with Sliver🛰️</title><link>https://www.notamaan.xyz/posts/exploring-c2-with-sliver/</link><pubDate>Thu, 15 Jan 2026 14:22:03 +0000</pubDate><guid>https://www.notamaan.xyz/posts/exploring-c2-with-sliver/</guid><description>&lt;hr>
 &lt;h2 id="introduction">introduction&lt;/h2>
 &lt;p>hi guys, I hope everyone is still goin strong with their new year resolutions 😀&lt;/p>
 &lt;p>in this blog we will be looking at how actual command and control works by setting up and playing with a realistic(ish) environment. I will be using &lt;a href="https://sliver.sh/">sliver&lt;/a> as an example but &lt;a href="https://havocframework.com/">havoc&lt;/a> and &lt;a href="https://github.com/LeighlinRamsay/GunnerC2">GunnerC2&lt;/a> are great open source alternatives.&lt;/p>
