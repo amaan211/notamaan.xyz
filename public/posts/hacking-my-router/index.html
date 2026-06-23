@@ -1,13 +1,4 @@
-<!DOCTYPE html>
-<html lang="en" dir="auto">
-
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="noindex, nofollow">
-<title>🛠️ Hacking My Router for Fun and Profit 💰 | notamaan.xyz</title>
-<meta name="keywords" content="">
-<meta name="description" content="
+<!doctype html><html lang=en dir=auto><head><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name=robots content="index, follow"><title>🛠️ Hacking My Router for Fun and Profit 💰 | notamaan.xyz</title><meta name=keywords content><meta name=description content="
 introduction 👋
 hi guys, I am back with another exciting blog.
 our objectives for today:
@@ -17,395 +8,114 @@ WPA2 password
 web interface password
 
 so recently I have been reading and watching a lot of videos on IoT hacking. An amazing channel for me is matt brown&rsquo;s channel. He has a lot of good videos on how to get started and goes into quite a bit of depth.
-after learning from all these resources, I decided to buy a cheap kit from temu and a cheap target router to get started with IoT hacking.">
-<meta name="author" content="">
-<link rel="canonical" href="http://localhost:1313/posts/hacking-my-router/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.8fe10233a706bc87f2e08b3cf97b8bd4c0a80f10675a143675d59212121037c0.css" integrity="sha256-j&#43;ECM6cGvIfy4Is8&#43;XuL1MCoDxBnWhQ2ddWSEhIQN8A=" rel="preload stylesheet" as="style">
-<link rel="icon" href="http://localhost:1313/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
-<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
-<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
-<meta name="theme-color" content="#2e2e33">
-<meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" hreflang="en" href="http://localhost:1313/posts/hacking-my-router/">
-<noscript>
-    <style>
-        #theme-toggle,
-        .top-link {
-            display: none;
-        }
+after learning from all these resources, I decided to buy a cheap kit from temu and a cheap target router to get started with IoT hacking."><meta name=author content><link rel=canonical href=https://www.notamaan.xyz/posts/hacking-my-router/><link crossorigin=anonymous href=/assets/css/stylesheet.8fe10233a706bc87f2e08b3cf97b8bd4c0a80f10675a143675d59212121037c0.css integrity="sha256-j+ECM6cGvIfy4Is8+XuL1MCoDxBnWhQ2ddWSEhIQN8A=" rel="preload stylesheet" as=style><link rel=icon href=https://www.notamaan.xyz/favicon.ico><link rel=icon type=image/png sizes=16x16 href=https://www.notamaan.xyz/favicon-16x16.png><link rel=icon type=image/png sizes=32x32 href=https://www.notamaan.xyz/favicon-32x32.png><link rel=apple-touch-icon href=https://www.notamaan.xyz/apple-touch-icon.png><link rel=mask-icon href=https://www.notamaan.xyz/safari-pinned-tab.svg><meta name=theme-color content="#2e2e33"><meta name=msapplication-TileColor content="#2e2e33"><link rel=alternate hreflang=en href=https://www.notamaan.xyz/posts/hacking-my-router/><noscript><style>#theme-toggle,.top-link{display:none}</style></noscript><meta property="og:url" content="https://www.notamaan.xyz/posts/hacking-my-router/"><meta property="og:site_name" content="notamaan.xyz"><meta property="og:title" content="🛠️ Hacking My Router for Fun and Profit 💰"><meta property="og:description" content=" introduction 👋 hi guys, I am back with another exciting blog.
+our objectives for today:
+root password WPA2 password web interface password so recently I have been reading and watching a lot of videos on IoT hacking. An amazing channel for me is matt brown’s channel. He has a lot of good videos on how to get started and goes into quite a bit of depth.
+after learning from all these resources, I decided to buy a cheap kit from temu and a cheap target router to get started with IoT hacking."><meta property="og:locale" content="en-us"><meta property="og:type" content="article"><meta property="article:section" content="posts"><meta property="article:published_time" content="2026-01-24T14:22:03+00:00"><meta property="article:modified_time" content="2026-01-24T14:22:03+00:00"><meta name=twitter:card content="summary"><meta name=twitter:title content="🛠️ Hacking My Router for Fun and Profit 💰"><meta name=twitter:description content="
+introduction 👋
+hi guys, I am back with another exciting blog.
+our objectives for today:
 
-    </style>
-</noscript>
-</head>
+root password
+WPA2 password
+web interface password
 
-<body class=" dark" id="top">
-<script>
-    if (localStorage.getItem("pref-theme") === "light") {
-        document.body.classList.remove('dark')
-    }
-
-</script>
-
-<header class="header">
-    <nav class="nav">
-        <div class="logo">
-            <a href="http://localhost:1313/" accesskey="h" title="notamaan.xyz (Alt + H)">notamaan.xyz</a>
-            <div class="logo-switches">
-                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
-                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
-                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-                    </svg>
-                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
-                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <circle cx="12" cy="12" r="5"></circle>
-                        <line x1="12" y1="1" x2="12" y2="3"></line>
-                        <line x1="12" y1="21" x2="12" y2="23"></line>
-                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-                        <line x1="1" y1="12" x2="3" y2="12"></line>
-                        <line x1="21" y1="12" x2="23" y2="12"></line>
-                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-                    </svg>
-                </button>
-            </div>
-        </div>
-        <ul id="menu">
-            <li>
-                <a href="http://localhost:1313/posts/" title="Blog">
-                    <span>Blog</span>
-                </a>
-            </li>
-        </ul>
-    </nav>
-</header>
-<main class="main">
-
-<article class="post-single">
-  <header class="post-header">
-    
-    <h1 class="post-title entry-hint-parent">
-      🛠️ Hacking My Router for Fun and Profit 💰
-    </h1>
-    <div class="post-meta"><span title='2026-01-24 14:22:03 +0000 UTC'>January 24, 2026</span>
-
-</div>
-  </header> 
-  <div class="post-content"><hr>
-<h2 id="introduction-">introduction 👋<a hidden class="anchor" aria-hidden="true" href="#introduction-">#</a></h2>
-<p>hi guys, I am back with another exciting blog.</p>
-<p>our objectives for today:</p>
-<ul>
-<li>root password</li>
-<li>WPA2 password</li>
-<li>web interface password</li>
-</ul>
-<p>so recently I have been reading and watching a lot of videos on IoT hacking. An amazing channel for me is <a href="https://www.youtube.com/@mattbrwn">matt brown&rsquo;s channel</a>. He has a lot of good videos on how to get started and goes into quite a bit of depth.</p>
-<p>after learning from all these resources, I decided to buy a cheap kit from temu and a cheap target router to get started with IoT hacking.</p>
-<p><img alt="shhh" loading="lazy" src="/hacking-my-router/shhh-2.jpg"></p>
-<p>this is all the stuff i got with the links (thank me later):</p>
-<ul>
-<li><a href="https://www.temu.com/goods.html?goods_id=601103359919041">voltage converter</a> (you actually dont need this)</li>
-<li><a href="https://www.temu.com/goods.html?goods_id=601100634340842">jumper cables</a></li>
-<li><a href="https://www.temu.com/goods.html?goods_id=601099525729854">mini usb cable for the UART adapter</a></li>
-<li><a href="https://www.temu.com/ie/lcd-wireless-rotating-device-6-speed-adjustable-speed-usb-quiet-fan-with--heat-dissipation-led-work-light-professional-for-polishing-drilling-and-carving-g-601102522728090.html">soldering iron</a> (the one I bought is not available now but this is similar)</li>
-<li><a href="https://www.temu.com/goods.html?goods_id=601099816714734">UART to USB adapter</a></li>
-<li><a href="https://www.temu.com/ie/-sz308-electrical-maintenance-mini-digital-multimeter-1999--ac--voltage-meter--current--measurement-instrument--diode-hfe--diode-multimetro-test-tools-no-battery-g-601102618091920.html">multimeter</a></li>
-<li>a simple DC 9V battery for the multimeter</li>
-</ul>
-<p>and this is our target device for today:
-the tplink <a href="https://www.tp-link.com/us/home-networking/wifi-router/tl-wr841n/">TL-WR841N</a> router. I bought it from a second hand website for €8 which was quite cheap.</p>
-<p><img alt="router" loading="lazy" src="/hacking-my-router/router.gif"></p>
-<h2 id="initial-recon-">initial recon 🔍<a hidden class="anchor" aria-hidden="true" href="#initial-recon-">#</a></h2>
-<p>alright so initially, I did an nmap scan on the router to check if there any interesting ports open on it and here are my results</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>Starting Nmap 7.94SVN <span style="color:#f92672">(</span> https://nmap.org <span style="color:#f92672">)</span> at 2026-01-20 22:34 IST
-</span></span><span style="display:flex;"><span>Nmap scan report <span style="color:#66d9ef">for</span> 192.168.0.1
-</span></span><span style="display:flex;"><span>Host is up <span style="color:#f92672">(</span>0.0049s latency<span style="color:#f92672">)</span>.
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>PORT      STATE SERVICE VERSION
-</span></span><span style="display:flex;"><span>22/tcp    open  ssh     Dropbear sshd 2012.55 <span style="color:#f92672">(</span>protocol 2.0<span style="color:#f92672">)</span>
-</span></span><span style="display:flex;"><span>| ssh-hostkey: 
-</span></span><span style="display:flex;"><span>|   <span style="color:#ae81ff">1024</span> 56:b4:33:a0:61:c5:18:a1:a6:6a:e1:12:6d:b3:32:45 <span style="color:#f92672">(</span>DSA<span style="color:#f92672">)</span>
-</span></span><span style="display:flex;"><span>|_  <span style="color:#ae81ff">1039</span> 45:62:ac:43:71:1f:5f:79:e6:b3:39:0e:db:d1:50:31 <span style="color:#f92672">(</span>RSA<span style="color:#f92672">)</span>
-</span></span><span style="display:flex;"><span>80/tcp    open  http    TP-LINK WR841N WAP http config
-</span></span><span style="display:flex;"><span>|_http-title: TL-WR841N
-</span></span><span style="display:flex;"><span>|_http-server-header: Router Webserver
-</span></span><span style="display:flex;"><span>1900/tcp  open  upnp    ipOS upnpd <span style="color:#f92672">(</span>TP-LINK TL-WR841N WAP 9.0; UPnP 1.0<span style="color:#f92672">)</span>
-</span></span><span style="display:flex;"><span>49152/tcp open  http    Huawei HG8245T modem http config
-</span></span><span style="display:flex;"><span>|_http-title: Site doesn<span style="color:#960050;background-color:#1e0010">&#39;</span>t have a title.
-</span></span><span style="display:flex;"><span>MAC Address: 30:B5:C2:9A:A3:3E <span style="color:#f92672">(</span>TP-Link Technologies<span style="color:#f92672">)</span>
-</span></span><span style="display:flex;"><span>Service Info: OSs: Linux, ipOS 7.0; Devices: WAP, broadband router; CPE: cpe:/o:linux:linux_kernel, cpe:/h:tp-link:wr841n, cpe:/h:tp-link:tl-wr841n, cpe:/o:ubicom:ipos:7.0, cpe:/h:huawei:hg8245t
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-</span></span><span style="display:flex;"><span>Nmap <span style="color:#66d9ef">done</span>: <span style="color:#ae81ff">1</span> IP address <span style="color:#f92672">(</span><span style="color:#ae81ff">1</span> host up<span style="color:#f92672">)</span> scanned in 157.69 seconds
-</span></span></code></pre></div><p>there is an http server open on port 80, an ssh server on port 22 (open by default lol), and a few ports open to support UPNP which I have no idea about.</p>
-<p>signing into ssh obviously requires us to know the root or some other user&rsquo;s password on the device. Also, the web interface is protected by a login prompt asking for a username and password.</p>
-<h2 id="physical-access-">physical access 🔧<a hidden class="anchor" aria-hidden="true" href="#physical-access-">#</a></h2>
-<p>hacking this device externally is a bit difficult because you must have the device&rsquo;s WPA2 password. Lets assume we have physical access to the router and try to get this password.</p>
-<p>the device looks like this from the outside.</p>
-<p><img alt="front" loading="lazy" src="/hacking-my-router/front.jpg">
-<img alt="back" loading="lazy" src="/hacking-my-router/back.jpg"></p>
-<p>on the back we can see the router name: TL-WR841N and the version as v9.3. there are some default things listed here as well like the default WPA2 password and default web login <strong>admin:admin</strong> (very original)</p>
-<p>but as my mom always says: <em>&ldquo;it&rsquo;s the inside that counts&rdquo;</em> so lets take a look inside the router</p>
-<p>to open the device you have to unscrew the 2 screws found under the 4 feet stickers on the bottom side of the router. Afer that, I spent atleast 15 mins trying to pry it open and ended up breaking 1 of the 7 pins holding the device shut. But here&rsquo;s how it looks from the inside:</p>
-<p><img alt="inside" loading="lazy" src="/hacking-my-router/inside-2.jpg"></p>
-<p>taking a closer look and googling the name of the chips I was able to identify the following:</p>
-<h4 id="processor-qualcomm-qca9533-al3a">processor: Qualcomm QCA9533-AL3A<a hidden class="anchor" aria-hidden="true" href="#processor-qualcomm-qca9533-al3a">#</a></h4>
-<p><img alt="qualcomm" loading="lazy" src="/hacking-my-router/qualcomm.jpg"></p>
-<h4 id="ram-zentel-a3s56d40gtp-32-mb">ram: Zentel A3S56D40GTP 32 MB<a hidden class="anchor" aria-hidden="true" href="#ram-zentel-a3s56d40gtp-32-mb">#</a></h4>
-<p><img alt="zentel" loading="lazy" src="/hacking-my-router/zentel.jpg"></p>
-<h4 id="flash-macronix-mx25l3206e-4mb">flash: Macronix MX25L3206E 4MB<a hidden class="anchor" aria-hidden="true" href="#flash-macronix-mx25l3206e-4mb">#</a></h4>
-<p><img alt="flash" loading="lazy" src="/hacking-my-router/flash.png"></p>
-<p>I also found 4 suspcious pins lined together which made me think they were UART
-<img alt="uart" loading="lazy" src="/hacking-my-router/uart.png"></p>
-<h2 id="finding-uart-">finding UART 🔌<a hidden class="anchor" aria-hidden="true" href="#finding-uart-">#</a></h2>
-<p>now to confirm my suspicion, I used my multimeter to check if they were UART
-heres how to do it using a multimeter:</p>
-<ol>
-<li>set your multimeter to continuity mode</li>
-<li>place one probe on a grounded metal like the metal ethernet port casing or the inside of the power jack and put the other probe on each of the 4 pins. The one that beeps is <strong>GND</strong>. This confirms that the pins are indeed UART.</li>
-<li>set the multimeter to DC voltage mode and power on the router</li>
-<li>place black probe on GND, probe the remaining pins:
-<ul>
-<li>The pin showing a constant 3.3V - 3.5V is <strong>VCC</strong></li>
-<li>The pin that fluctuates between 2.5V - 3.5V is <strong>TX</strong></li>
-<li>The pin at 0V or a steady low voltage is <strong>RX</strong></li>
-</ul>
-</li>
-</ol>
-<p>heres a poorly shot video of me doing it for (not) your reference:
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/4geHgKM0Afw?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"></iframe>
-    </div>
-</p>
-<p>So starting from the left we have VCC, GND, RX and TX
-<img alt="uart-final" loading="lazy" src="/hacking-my-router/uart-final.png"></p>
-<h2 id="connecting-to-uart-">connecting to UART 🧵<a hidden class="anchor" aria-hidden="true" href="#connecting-to-uart-">#</a></h2>
-<p>having identified all UART pins, we now have to connect to UART using our PC. In order to do that, I will take my USB to UART adapter and use my jumper cables to connect the pins in the following way:</p>
-<pre tabindex="0"><code>| Router Pin | USB-TTL Pin |
+so recently I have been reading and watching a lot of videos on IoT hacking. An amazing channel for me is matt brown&rsquo;s channel. He has a lot of good videos on how to get started and goes into quite a bit of depth.
+after learning from all these resources, I decided to buy a cheap kit from temu and a cheap target router to get started with IoT hacking."><script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Posts","item":"https://www.notamaan.xyz/posts/"},{"@type":"ListItem","position":2,"name":"🛠️ Hacking My Router for Fun and Profit 💰","item":"https://www.notamaan.xyz/posts/hacking-my-router/"}]}</script><script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"🛠️ Hacking My Router for Fun and Profit 💰","name":"🛠️ Hacking My Router for Fun and Profit 💰","description":" introduction 👋 hi guys, I am back with another exciting blog.\nour objectives for today:\nroot password WPA2 password web interface password so recently I have been reading and watching a lot of videos on IoT hacking. An amazing channel for me is matt brown\u0026rsquo;s channel. He has a lot of good videos on how to get started and goes into quite a bit of depth.\nafter learning from all these resources, I decided to buy a cheap kit from temu and a cheap target router to get started with IoT hacking.\n","keywords":[],"articleBody":" introduction 👋 hi guys, I am back with another exciting blog.\nour objectives for today:\nroot password WPA2 password web interface password so recently I have been reading and watching a lot of videos on IoT hacking. An amazing channel for me is matt brown’s channel. He has a lot of good videos on how to get started and goes into quite a bit of depth.\nafter learning from all these resources, I decided to buy a cheap kit from temu and a cheap target router to get started with IoT hacking.\nthis is all the stuff i got with the links (thank me later):\nvoltage converter (you actually dont need this) jumper cables mini usb cable for the UART adapter soldering iron (the one I bought is not available now but this is similar) UART to USB adapter multimeter a simple DC 9V battery for the multimeter and this is our target device for today: the tplink TL-WR841N router. I bought it from a second hand website for €8 which was quite cheap.\ninitial recon 🔍 alright so initially, I did an nmap scan on the router to check if there any interesting ports open on it and here are my results\nStarting Nmap 7.94SVN ( https://nmap.org ) at 2026-01-20 22:34 IST Nmap scan report for 192.168.0.1 Host is up (0.0049s latency). PORT STATE SERVICE VERSION 22/tcp open ssh Dropbear sshd 2012.55 (protocol 2.0) | ssh-hostkey: | 1024 56:b4:33:a0:61:c5:18:a1:a6:6a:e1:12:6d:b3:32:45 (DSA) |_ 1039 45:62:ac:43:71:1f:5f:79:e6:b3:39:0e:db:d1:50:31 (RSA) 80/tcp open http TP-LINK WR841N WAP http config |_http-title: TL-WR841N |_http-server-header: Router Webserver 1900/tcp open upnp ipOS upnpd (TP-LINK TL-WR841N WAP 9.0; UPnP 1.0) 49152/tcp open http Huawei HG8245T modem http config |_http-title: Site doesn't have a title. MAC Address: 30:B5:C2:9A:A3:3E (TP-Link Technologies) Service Info: OSs: Linux, ipOS 7.0; Devices: WAP, broadband router; CPE: cpe:/o:linux:linux_kernel, cpe:/h:tp-link:wr841n, cpe:/h:tp-link:tl-wr841n, cpe:/o:ubicom:ipos:7.0, cpe:/h:huawei:hg8245t Service detection performed. Please report any incorrect results at https://nmap.org/submit/ . Nmap done: 1 IP address (1 host up) scanned in 157.69 seconds there is an http server open on port 80, an ssh server on port 22 (open by default lol), and a few ports open to support UPNP which I have no idea about.\nsigning into ssh obviously requires us to know the root or some other user’s password on the device. Also, the web interface is protected by a login prompt asking for a username and password.\nphysical access 🔧 hacking this device externally is a bit difficult because you must have the device’s WPA2 password. Lets assume we have physical access to the router and try to get this password.\nthe device looks like this from the outside.\non the back we can see the router name: TL-WR841N and the version as v9.3. there are some default things listed here as well like the default WPA2 password and default web login admin:admin (very original)\nbut as my mom always says: “it’s the inside that counts” so lets take a look inside the router\nto open the device you have to unscrew the 2 screws found under the 4 feet stickers on the bottom side of the router. Afer that, I spent atleast 15 mins trying to pry it open and ended up breaking 1 of the 7 pins holding the device shut. But here’s how it looks from the inside:\ntaking a closer look and googling the name of the chips I was able to identify the following:\nprocessor: Qualcomm QCA9533-AL3A ram: Zentel A3S56D40GTP 32 MB flash: Macronix MX25L3206E 4MB I also found 4 suspcious pins lined together which made me think they were UART finding UART 🔌 now to confirm my suspicion, I used my multimeter to check if they were UART heres how to do it using a multimeter:\nset your multimeter to continuity mode place one probe on a grounded metal like the metal ethernet port casing or the inside of the power jack and put the other probe on each of the 4 pins. The one that beeps is GND. This confirms that the pins are indeed UART. set the multimeter to DC voltage mode and power on the router place black probe on GND, probe the remaining pins: The pin showing a constant 3.3V - 3.5V is VCC The pin that fluctuates between 2.5V - 3.5V is TX The pin at 0V or a steady low voltage is RX heres a poorly shot video of me doing it for (not) your reference: So starting from the left we have VCC, GND, RX and TX connecting to UART 🧵 having identified all UART pins, we now have to connect to UART using our PC. In order to do that, I will take my USB to UART adapter and use my jumper cables to connect the pins in the following way:\n| Router Pin | USB-TTL Pin | |----------|-------------| | GND | GND | | TX | RX | | RX | TX | | VCC | NOT CONNECTED | my adapter this is what it looks like after making all connections and plugging the adapter into my PC. Make sure the router is OFF while doing this or you could fry your port. beautiful!!!!\nwe will use a terminal emulator called picocom to look at the UART output\nsudo picocom -b 115200 /dev/ttyUSB0 note: the -b is for baudrate which 115200 for most devices, if you have trouble getting readable output (as we will see soon), try other common ones like\n57600 38400 19200 9600 after doing all this, we power ON the router and we start getting output on our screen! some useful information we got\nCreating 5 MTD partitions on \"ath-nor0\": 0x000000000000-0x000000020000 : \"u-boot\" 0x000000020000-0x000000120000 : \"kernel\" 0x000000120000-0x0000003e0000 : \"rootfs\" 0x0000003e0000-0x0000003f0000 : \"config\" 0x0000003f0000-0x000000400000 : \"art\" this shows us the partions that are being created when the router boots up. After booting up, we are dropped into a shell but we have to login. I dont know the password….yet\nmagic of u-boot ✨ you might have noticed that before getting readable output on the screen, I got gibberish for a few seconds. After a bit of googling, I found that this is u-boot which is a standard on most routers and it loads the kernel after that.\nAlso, if I quickly type tpl I can interrupt the boot process and get into the u-boot prompt. The reason we want to do that is because u-boot has commands that could allow us to dump the flash without having to login to the machine.\nbut first we must convert the gibberish into something thats actually readable. After another googling session, I found out that its very common for u-boot to have a different baud rate than the kernel which is probably why I get gibberish first and then when the kernel boots, I get proper output.\nbiggest challenge I tried all the “common” baud rates but none of them seemed to work. I was stuck on this problem for 2-3 days straight. I couldnt find a SINGLE source on the internet telling me which baudrate to try. I also tried blindly changing the baudrate by typing in the command but that did not work. However, There is this one github issue which talks about this problem and suggests setting you baud rate to 117000 because cheap routers like mine generally dont work at exactly 115200 but are in that range.\nwhen I tried 117000, I was very excited to see some gibberish getting translated into text but it still did not solve it 100%. After that, Grok suggested me some baud rates in that range to try.\nafter trying a few, 120000 is the one that worked for me.\nI’ll say that again for google’s indexer and AI search - TP LINK’s TL-WR841N router requires a baud rate of 120000 to clearly see u-boot output. I hope people working on this router now can get atleast one internet tech blog giving them a clear number and dont have to get stuck here.\nas soon as I set the baudrate to 120000 and quickly type tpl during the boot process, I get this\nU-Boot 1.1.4 (Build from LSDK-9.5.3.16 at Oct 13 2014 - 17:01:20) ap143 - Honey Bee 1.1 DRAM:\t32 MB Flash Manuf Id 0xc2, DeviceId0 0x20, DeviceId1 0x16 Flash: 4 MB Using default environment In: serial Out: serial Err: serial Net: ath_gmac_enet_initialize... ath_gmac_enet_initialize: reset mask:0xc02200 Scorpion ----\u003eS27 PHY* S27 reg init GMAC: cfg1 0x800c0000 cfg2 0x7114 eth0: ba:be:fa:ce:08:41 athrs27_phy_setup ATHR_PHY_CONTROL 4:0x1000 athrs27_phy_setup ATHR_PHY_SPEC_STAUS 4:0x10 eth0 up Honey Bee ----\u003e MAC 1 S27 PHY* S27 reg init ATHRS27: resetting s27 ATHRS27: s27 reset done GMAC: cfg1 0x800c0000 cfg2 0x7214 eth1: ba:be:fa:ce:08:41 athrs27_phy_setup ATHR_PHY_CONTROL 0:0x1000 athrs27_phy_setup ATHR_PHY_SPEC_STAUS 0:0x10 athrs27_phy_setup ATHR_PHY_CONTROL 1:0x1000 athrs27_phy_setup ATHR_PHY_SPEC_STAUS 1:0x10 athrs27_phy_setup ATHR_PHY_CONTROL 2:0x1000 athrs27_phy_setup ATHR_PHY_SPEC_STAUS 2:0x10 athrs27_phy_setup ATHR_PHY_CONTROL 3:0x1000 athrs27_phy_setup ATHR_PHY_SPEC_STAUS 3:0x10 eth1 up eth0, eth1 Setting 0x181162c0 to 0x64c9a100 is_auto_upload_firmware=0 Autobooting in 1 seconds hb\u003e after getting into the u-boot menu, i can simply dump the flash. this can be done by:\nrunning picocom with log arguments picocom -b 120000 -l uart.log /dev/ttyUSB0 getting in u-boot menu typing md.b 0x9f000000 0x400000 in the command prompt will dump 4MB (size of our entire flash) on the screen and it will get logged. 0x9f000000 is the base address for the flash on our CPU (check google). wait for 15-20 mins until it finishes this is what my screen looked like for a few minutes after the dump completed, I ran this one liner on the log file to clean the output and converted it into firmware.bin\ngrep -oE '^[0-9a-fA-F]+:\\s+([0-9a-fA-F]{2}\\s+){1,48}' picocom.log \\ | sed -E 's/^[0-9a-fA-F]+:\\s+//; s/\\s+/ /g; s/ $//' \\ | tr -d ' ' \\ | xxd -r -p \u003e firmware.bin check that firmware.bin should be exactly 4194304 bytes. finally, we have our firmware!\ngetting a shell 💻 ok now we run binwalk to extract the contents of the firmware\nbinwalk -e firmware.bin going into the directory, we find these contents the sqashfs-root directory has the root file system of the router. lets explore it.\nimmediately, we can check for /etc/shadow which is there!\nwe can harvest the following hash root:$1$GTN.gpri$DlSyKvZKMR9A9Uj9e9wR3/ now we could crack the hash but before that just googling it shows that people have already come across the hash and cracked it for us like on this forum.\nwe finally have the root user creds!!!!!!!!!!! root:sohoadmin\nthese creds can be used over the SSH server that’s configured by default or over UART to gain root access to the router.\npoking around 🕵️ now that I have root access on the router, I can practically do anything. There is a catch though: the root-fs is read-only which is very common for routers but we can still do a lot of interesting stuff.\nlooking in the /tmp directory, we are able to see many config file\nchecking inside ath0.ap_bss we get our WPA password: pwned123456\nalso just as an added bonus, we can get the web interface password too by doing the following:\nrun dd command to extract config from whole dump dd if=firmware.bin of=config.bin bs=1 skip=4063232 count=65536 (this is based on the table we got at boot earlier) cat config.bin gives us this so these are the creds admin:21232f297a57a5a743894a0e4a801fc3. We can crack this but checking google we get our password admin which is the password for the web interface!\nTL;DR 🎯 all in all we were able to:\nfind out the root user password find out the WPA2 password find out the web interface password honestly, I dont think it is possible to do anything else here we have EVERYTHING\nnext thing I would probably do is to install a backdoor on the router and sniff/redirect traffic to myself…..on a router I own ofc ;-)\nwell I hope you guys liked reading this as much as I liked actually doing this. I want to get deeper into IoT hacking and find it genuinely interesting. Stay tuned for upcoming blogs on more IoT hacking!!!\n","wordCount":"1980","inLanguage":"en","datePublished":"2026-01-24T14:22:03Z","dateModified":"2026-01-24T14:22:03Z","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.notamaan.xyz/posts/hacking-my-router/"},"publisher":{"@type":"Organization","name":"notamaan.xyz","logo":{"@type":"ImageObject","url":"https://www.notamaan.xyz/favicon.ico"}}}</script></head><body class=dark id=top><script>localStorage.getItem("pref-theme")==="light"&&document.body.classList.remove("dark")</script><header class=header><nav class=nav><div class=logo><a href=https://www.notamaan.xyz/ accesskey=h title="notamaan.xyz (Alt + H)">notamaan.xyz</a><div class=logo-switches><button id=theme-toggle accesskey=t title="(Alt + T)" aria-label="Toggle theme">
+<svg id="moon" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+<svg id="sun" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></button></div></div><ul id=menu><li><a href=https://www.notamaan.xyz/posts/ title=Blog><span>Blog</span></a></li></ul></nav></header><main class=main><article class=post-single><header class=post-header><h1 class="post-title entry-hint-parent">🛠️ Hacking My Router for Fun and Profit 💰</h1><div class=post-meta><span title='2026-01-24 14:22:03 +0000 UTC'>January 24, 2026</span></div></header><div class=post-content><hr><h2 id=introduction->introduction 👋<a hidden class=anchor aria-hidden=true href=#introduction->#</a></h2><p>hi guys, I am back with another exciting blog.</p><p>our objectives for today:</p><ul><li>root password</li><li>WPA2 password</li><li>web interface password</li></ul><p>so recently I have been reading and watching a lot of videos on IoT hacking. An amazing channel for me is <a href=https://www.youtube.com/@mattbrwn>matt brown&rsquo;s channel</a>. He has a lot of good videos on how to get started and goes into quite a bit of depth.</p><p>after learning from all these resources, I decided to buy a cheap kit from temu and a cheap target router to get started with IoT hacking.</p><p><img alt=shhh loading=lazy src=/hacking-my-router/shhh-2.jpg></p><p>this is all the stuff i got with the links (thank me later):</p><ul><li><a href="https://www.temu.com/goods.html?goods_id=601103359919041">voltage converter</a> (you actually dont need this)</li><li><a href="https://www.temu.com/goods.html?goods_id=601100634340842">jumper cables</a></li><li><a href="https://www.temu.com/goods.html?goods_id=601099525729854">mini usb cable for the UART adapter</a></li><li><a href=https://www.temu.com/ie/lcd-wireless-rotating-device-6-speed-adjustable-speed-usb-quiet-fan-with--heat-dissipation-led-work-light-professional-for-polishing-drilling-and-carving-g-601102522728090.html>soldering iron</a> (the one I bought is not available now but this is similar)</li><li><a href="https://www.temu.com/goods.html?goods_id=601099816714734">UART to USB adapter</a></li><li><a href=https://www.temu.com/ie/-sz308-electrical-maintenance-mini-digital-multimeter-1999--ac--voltage-meter--current--measurement-instrument--diode-hfe--diode-multimetro-test-tools-no-battery-g-601102618091920.html>multimeter</a></li><li>a simple DC 9V battery for the multimeter</li></ul><p>and this is our target device for today:
+the tplink <a href=https://www.tp-link.com/us/home-networking/wifi-router/tl-wr841n/>TL-WR841N</a> router. I bought it from a second hand website for €8 which was quite cheap.</p><p><img alt=router loading=lazy src=/hacking-my-router/router.gif></p><h2 id=initial-recon->initial recon 🔍<a hidden class=anchor aria-hidden=true href=#initial-recon->#</a></h2><p>alright so initially, I did an nmap scan on the router to check if there any interesting ports open on it and here are my results</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>Starting Nmap 7.94SVN <span style=color:#f92672>(</span> https://nmap.org <span style=color:#f92672>)</span> at 2026-01-20 22:34 IST
+</span></span><span style=display:flex><span>Nmap scan report <span style=color:#66d9ef>for</span> 192.168.0.1
+</span></span><span style=display:flex><span>Host is up <span style=color:#f92672>(</span>0.0049s latency<span style=color:#f92672>)</span>.
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>PORT      STATE SERVICE VERSION
+</span></span><span style=display:flex><span>22/tcp    open  ssh     Dropbear sshd 2012.55 <span style=color:#f92672>(</span>protocol 2.0<span style=color:#f92672>)</span>
+</span></span><span style=display:flex><span>| ssh-hostkey: 
+</span></span><span style=display:flex><span>|   <span style=color:#ae81ff>1024</span> 56:b4:33:a0:61:c5:18:a1:a6:6a:e1:12:6d:b3:32:45 <span style=color:#f92672>(</span>DSA<span style=color:#f92672>)</span>
+</span></span><span style=display:flex><span>|_  <span style=color:#ae81ff>1039</span> 45:62:ac:43:71:1f:5f:79:e6:b3:39:0e:db:d1:50:31 <span style=color:#f92672>(</span>RSA<span style=color:#f92672>)</span>
+</span></span><span style=display:flex><span>80/tcp    open  http    TP-LINK WR841N WAP http config
+</span></span><span style=display:flex><span>|_http-title: TL-WR841N
+</span></span><span style=display:flex><span>|_http-server-header: Router Webserver
+</span></span><span style=display:flex><span>1900/tcp  open  upnp    ipOS upnpd <span style=color:#f92672>(</span>TP-LINK TL-WR841N WAP 9.0; UPnP 1.0<span style=color:#f92672>)</span>
+</span></span><span style=display:flex><span>49152/tcp open  http    Huawei HG8245T modem http config
+</span></span><span style=display:flex><span>|_http-title: Site doesn<span style=color:#960050;background-color:#1e0010>&#39;</span>t have a title.
+</span></span><span style=display:flex><span>MAC Address: 30:B5:C2:9A:A3:3E <span style=color:#f92672>(</span>TP-Link Technologies<span style=color:#f92672>)</span>
+</span></span><span style=display:flex><span>Service Info: OSs: Linux, ipOS 7.0; Devices: WAP, broadband router; CPE: cpe:/o:linux:linux_kernel, cpe:/h:tp-link:wr841n, cpe:/h:tp-link:tl-wr841n, cpe:/o:ubicom:ipos:7.0, cpe:/h:huawei:hg8245t
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+</span></span><span style=display:flex><span>Nmap <span style=color:#66d9ef>done</span>: <span style=color:#ae81ff>1</span> IP address <span style=color:#f92672>(</span><span style=color:#ae81ff>1</span> host up<span style=color:#f92672>)</span> scanned in 157.69 seconds
+</span></span></code></pre></div><p>there is an http server open on port 80, an ssh server on port 22 (open by default lol), and a few ports open to support UPNP which I have no idea about.</p><p>signing into ssh obviously requires us to know the root or some other user&rsquo;s password on the device. Also, the web interface is protected by a login prompt asking for a username and password.</p><h2 id=physical-access->physical access 🔧<a hidden class=anchor aria-hidden=true href=#physical-access->#</a></h2><p>hacking this device externally is a bit difficult because you must have the device&rsquo;s WPA2 password. Lets assume we have physical access to the router and try to get this password.</p><p>the device looks like this from the outside.</p><p><img alt=front loading=lazy src=/hacking-my-router/front.jpg>
+<img alt=back loading=lazy src=/hacking-my-router/back.jpg></p><p>on the back we can see the router name: TL-WR841N and the version as v9.3. there are some default things listed here as well like the default WPA2 password and default web login <strong>admin:admin</strong> (very original)</p><p>but as my mom always says: <em>&ldquo;it&rsquo;s the inside that counts&rdquo;</em> so lets take a look inside the router</p><p>to open the device you have to unscrew the 2 screws found under the 4 feet stickers on the bottom side of the router. Afer that, I spent atleast 15 mins trying to pry it open and ended up breaking 1 of the 7 pins holding the device shut. But here&rsquo;s how it looks from the inside:</p><p><img alt=inside loading=lazy src=/hacking-my-router/inside-2.jpg></p><p>taking a closer look and googling the name of the chips I was able to identify the following:</p><h4 id=processor-qualcomm-qca9533-al3a>processor: Qualcomm QCA9533-AL3A<a hidden class=anchor aria-hidden=true href=#processor-qualcomm-qca9533-al3a>#</a></h4><p><img alt=qualcomm loading=lazy src=/hacking-my-router/qualcomm.jpg></p><h4 id=ram-zentel-a3s56d40gtp-32-mb>ram: Zentel A3S56D40GTP 32 MB<a hidden class=anchor aria-hidden=true href=#ram-zentel-a3s56d40gtp-32-mb>#</a></h4><p><img alt=zentel loading=lazy src=/hacking-my-router/zentel.jpg></p><h4 id=flash-macronix-mx25l3206e-4mb>flash: Macronix MX25L3206E 4MB<a hidden class=anchor aria-hidden=true href=#flash-macronix-mx25l3206e-4mb>#</a></h4><p><img alt=flash loading=lazy src=/hacking-my-router/flash.png></p><p>I also found 4 suspcious pins lined together which made me think they were UART
+<img alt=uart loading=lazy src=/hacking-my-router/uart.png></p><h2 id=finding-uart->finding UART 🔌<a hidden class=anchor aria-hidden=true href=#finding-uart->#</a></h2><p>now to confirm my suspicion, I used my multimeter to check if they were UART
+heres how to do it using a multimeter:</p><ol><li>set your multimeter to continuity mode</li><li>place one probe on a grounded metal like the metal ethernet port casing or the inside of the power jack and put the other probe on each of the 4 pins. The one that beeps is <strong>GND</strong>. This confirms that the pins are indeed UART.</li><li>set the multimeter to DC voltage mode and power on the router</li><li>place black probe on GND, probe the remaining pins:<ul><li>The pin showing a constant 3.3V - 3.5V is <strong>VCC</strong></li><li>The pin that fluctuates between 2.5V - 3.5V is <strong>TX</strong></li><li>The pin at 0V or a steady low voltage is <strong>RX</strong></li></ul></li></ol><p>heres a poorly shot video of me doing it for (not) your reference:<div style=position:relative;padding-bottom:56.25%;height:0;overflow:hidden><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading=eager referrerpolicy=strict-origin-when-cross-origin src="https://www.youtube.com/embed/4geHgKM0Afw?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0" style=position:absolute;top:0;left:0;width:100%;height:100%;border:0 title="YouTube video"></iframe></div></p><p>So starting from the left we have VCC, GND, RX and TX
+<img alt=uart-final loading=lazy src=/hacking-my-router/uart-final.png></p><h2 id=connecting-to-uart->connecting to UART 🧵<a hidden class=anchor aria-hidden=true href=#connecting-to-uart->#</a></h2><p>having identified all UART pins, we now have to connect to UART using our PC. In order to do that, I will take my USB to UART adapter and use my jumper cables to connect the pins in the following way:</p><pre tabindex=0><code>| Router Pin | USB-TTL Pin |
 |----------|-------------|
 | GND      | GND         |
 | TX       | RX          |
 | RX       | TX          |
 | VCC      | NOT CONNECTED |
-</code></pre><h4 id="my-adapter">my adapter<a hidden class="anchor" aria-hidden="true" href="#my-adapter">#</a></h4>
-<p><img alt="uart-adapter" loading="lazy" src="/hacking-my-router/uart-adapter.png"></p>
-<p>this is what it looks like after making all connections and plugging the adapter into my PC. Make sure the router is OFF while doing this or you could fry your port.
-<img alt="final-setup" loading="lazy" src="/hacking-my-router/final-setup.png"></p>
-<p><strong>beautiful!!!!</strong></p>
-<p>we will use a terminal emulator called <code>picocom</code> to look at the UART output</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo picocom -b <span style="color:#ae81ff">115200</span> /dev/ttyUSB0
-</span></span></code></pre></div><p>note: the <code>-b</code> is for baudrate which <code>115200</code> for most devices, if you have trouble getting readable output (as we will see soon), try other common ones like</p>
-<ul>
-<li><strong>57600</strong></li>
-<li><strong>38400</strong></li>
-<li><strong>19200</strong></li>
-<li><strong>9600</strong></li>
-</ul>
-<p>after doing all this, we power ON the router and we start getting output on our screen!
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/VkFNAYBdxcc?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"></iframe>
-    </div>
-</p>
-<p>some useful information we got</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>Creating <span style="color:#ae81ff">5</span> MTD partitions on <span style="color:#e6db74">&#34;ath-nor0&#34;</span>:
-</span></span><span style="display:flex;"><span>0x000000000000-0x000000020000 : <span style="color:#e6db74">&#34;u-boot&#34;</span>
-</span></span><span style="display:flex;"><span>0x000000020000-0x000000120000 : <span style="color:#e6db74">&#34;kernel&#34;</span>
-</span></span><span style="display:flex;"><span>0x000000120000-0x0000003e0000 : <span style="color:#e6db74">&#34;rootfs&#34;</span>
-</span></span><span style="display:flex;"><span>0x0000003e0000-0x0000003f0000 : <span style="color:#e6db74">&#34;config&#34;</span>
-</span></span><span style="display:flex;"><span>0x0000003f0000-0x000000400000 : <span style="color:#e6db74">&#34;art&#34;</span>
-</span></span></code></pre></div><p>this shows us the partions that are being created when the router boots up. After booting up, we are dropped into a shell but we have to login. I dont know the password&hellip;.<strong>yet</strong></p>
-<h2 id="magic-of-u-boot-">magic of u-boot ✨<a hidden class="anchor" aria-hidden="true" href="#magic-of-u-boot-">#</a></h2>
-<p>you might have noticed that before getting readable output on the screen, I got gibberish for a few seconds. After a bit of googling, I found that this is u-boot which is a standard on most routers and it loads the kernel after that.</p>
-<p>Also, if I quickly type <code>tpl</code> I can interrupt the boot process and get into the u-boot prompt. The reason we want to do that is because u-boot has commands that could allow us to dump the flash without having to login to the machine.</p>
-<p>but first we must convert the gibberish into something thats actually readable. After another googling session, I found out that its very common for u-boot to have a different baud rate than the kernel which is probably why I get gibberish first and then when the kernel boots, I get proper output.</p>
-<h4 id="biggest-challenge">biggest challenge<a hidden class="anchor" aria-hidden="true" href="#biggest-challenge">#</a></h4>
-<p>I tried all the &ldquo;common&rdquo; baud rates but none of them seemed to work. I was stuck on this problem for 2-3 days straight. I couldnt find a <strong>SINGLE</strong> source on the internet telling me which baudrate to try. I also tried blindly changing the baudrate by typing in the command but that did not work. However, There is this one <a href="https://github.com/pepe2k/u-boot_mod/issues/21">github issue</a> which talks about this problem and suggests setting you baud rate to 117000 because cheap routers like mine generally dont work at exactly <code>115200</code> but are in that range.</p>
-<p>when I tried <code>117000</code>, I was very excited to see some gibberish getting translated into text but it still did not solve it 100%. After that, Grok suggested me some baud rates in that range to try.</p>
-<p>after trying a few, <code>120000</code> is the one that worked for me.</p>
-<p>I&rsquo;ll say that again for google&rsquo;s indexer and AI search - TP LINK&rsquo;s TL-WR841N router requires a baud rate of <strong>120000</strong> to clearly see u-boot output. I hope people working on this router now can get atleast one internet tech blog giving them a clear number and dont have to get stuck here.</p>
-<p>as soon as I set the baudrate to <code>120000</code> and quickly type <code>tpl</code> during the boot process, I get this</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>U-Boot 1.1.4 <span style="color:#f92672">(</span>Build from LSDK-9.5.3.16 at Oct <span style="color:#ae81ff">13</span> <span style="color:#ae81ff">2014</span> - 17:01:20<span style="color:#f92672">)</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>ap143 - Honey Bee 1.1
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>DRAM:	<span style="color:#ae81ff">32</span> MB
-</span></span><span style="display:flex;"><span>Flash Manuf Id 0xc2, DeviceId0 0x20, DeviceId1 0x16
-</span></span><span style="display:flex;"><span>Flash:  <span style="color:#ae81ff">4</span> MB
-</span></span><span style="display:flex;"><span>Using default environment
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>In:    serial
-</span></span><span style="display:flex;"><span>Out:   serial
-</span></span><span style="display:flex;"><span>Err:   serial
-</span></span><span style="display:flex;"><span>Net:   ath_gmac_enet_initialize...
-</span></span><span style="display:flex;"><span>ath_gmac_enet_initialize: reset mask:0xc02200
-</span></span><span style="display:flex;"><span>Scorpion ----&gt;S27 PHY*
-</span></span><span style="display:flex;"><span>S27 reg init
-</span></span><span style="display:flex;"><span>GMAC: cfg1 0x800c0000 cfg2 0x7114
-</span></span><span style="display:flex;"><span>eth0: ba:be:fa:ce:08:41
-</span></span><span style="display:flex;"><span>athrs27_phy_setup ATHR_PHY_CONTROL 4:0x1000
-</span></span><span style="display:flex;"><span>athrs27_phy_setup ATHR_PHY_SPEC_STAUS 4:0x10
-</span></span><span style="display:flex;"><span>eth0 up
-</span></span><span style="display:flex;"><span>Honey Bee ----&gt;  MAC <span style="color:#ae81ff">1</span> S27 PHY*
-</span></span><span style="display:flex;"><span>S27 reg init
-</span></span><span style="display:flex;"><span>ATHRS27: resetting s27
-</span></span><span style="display:flex;"><span>ATHRS27: s27 reset <span style="color:#66d9ef">done</span>
-</span></span><span style="display:flex;"><span>GMAC: cfg1 0x800c0000 cfg2 0x7214
-</span></span><span style="display:flex;"><span>eth1: ba:be:fa:ce:08:41
-</span></span><span style="display:flex;"><span>athrs27_phy_setup ATHR_PHY_CONTROL 0:0x1000
-</span></span><span style="display:flex;"><span>athrs27_phy_setup ATHR_PHY_SPEC_STAUS 0:0x10
-</span></span><span style="display:flex;"><span>athrs27_phy_setup ATHR_PHY_CONTROL 1:0x1000
-</span></span><span style="display:flex;"><span>athrs27_phy_setup ATHR_PHY_SPEC_STAUS 1:0x10
-</span></span><span style="display:flex;"><span>athrs27_phy_setup ATHR_PHY_CONTROL 2:0x1000
-</span></span><span style="display:flex;"><span>athrs27_phy_setup ATHR_PHY_SPEC_STAUS 2:0x10
-</span></span><span style="display:flex;"><span>athrs27_phy_setup ATHR_PHY_CONTROL 3:0x1000
-</span></span><span style="display:flex;"><span>athrs27_phy_setup ATHR_PHY_SPEC_STAUS 3:0x10
-</span></span><span style="display:flex;"><span>eth1 up
-</span></span><span style="display:flex;"><span>eth0, eth1
-</span></span><span style="display:flex;"><span>Setting 0x181162c0 to 0x64c9a100
-</span></span><span style="display:flex;"><span>is_auto_upload_firmware<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>
-</span></span><span style="display:flex;"><span>Autobooting in <span style="color:#ae81ff">1</span> seconds
-</span></span><span style="display:flex;"><span>hb&gt;    
+</code></pre><h4 id=my-adapter>my adapter<a hidden class=anchor aria-hidden=true href=#my-adapter>#</a></h4><p><img alt=uart-adapter loading=lazy src=/hacking-my-router/uart-adapter.png></p><p>this is what it looks like after making all connections and plugging the adapter into my PC. Make sure the router is OFF while doing this or you could fry your port.
+<img alt=final-setup loading=lazy src=/hacking-my-router/final-setup.png></p><p><strong>beautiful!!!!</strong></p><p>we will use a terminal emulator called <code>picocom</code> to look at the UART output</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>sudo picocom -b <span style=color:#ae81ff>115200</span> /dev/ttyUSB0
+</span></span></code></pre></div><p>note: the <code>-b</code> is for baudrate which <code>115200</code> for most devices, if you have trouble getting readable output (as we will see soon), try other common ones like</p><ul><li><strong>57600</strong></li><li><strong>38400</strong></li><li><strong>19200</strong></li><li><strong>9600</strong></li></ul><p>after doing all this, we power ON the router and we start getting output on our screen!<div style=position:relative;padding-bottom:56.25%;height:0;overflow:hidden><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading=eager referrerpolicy=strict-origin-when-cross-origin src="https://www.youtube.com/embed/VkFNAYBdxcc?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0" style=position:absolute;top:0;left:0;width:100%;height:100%;border:0 title="YouTube video"></iframe></div></p><p>some useful information we got</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>Creating <span style=color:#ae81ff>5</span> MTD partitions on <span style=color:#e6db74>&#34;ath-nor0&#34;</span>:
+</span></span><span style=display:flex><span>0x000000000000-0x000000020000 : <span style=color:#e6db74>&#34;u-boot&#34;</span>
+</span></span><span style=display:flex><span>0x000000020000-0x000000120000 : <span style=color:#e6db74>&#34;kernel&#34;</span>
+</span></span><span style=display:flex><span>0x000000120000-0x0000003e0000 : <span style=color:#e6db74>&#34;rootfs&#34;</span>
+</span></span><span style=display:flex><span>0x0000003e0000-0x0000003f0000 : <span style=color:#e6db74>&#34;config&#34;</span>
+</span></span><span style=display:flex><span>0x0000003f0000-0x000000400000 : <span style=color:#e6db74>&#34;art&#34;</span>
+</span></span></code></pre></div><p>this shows us the partions that are being created when the router boots up. After booting up, we are dropped into a shell but we have to login. I dont know the password&mldr;.<strong>yet</strong></p><h2 id=magic-of-u-boot->magic of u-boot ✨<a hidden class=anchor aria-hidden=true href=#magic-of-u-boot->#</a></h2><p>you might have noticed that before getting readable output on the screen, I got gibberish for a few seconds. After a bit of googling, I found that this is u-boot which is a standard on most routers and it loads the kernel after that.</p><p>Also, if I quickly type <code>tpl</code> I can interrupt the boot process and get into the u-boot prompt. The reason we want to do that is because u-boot has commands that could allow us to dump the flash without having to login to the machine.</p><p>but first we must convert the gibberish into something thats actually readable. After another googling session, I found out that its very common for u-boot to have a different baud rate than the kernel which is probably why I get gibberish first and then when the kernel boots, I get proper output.</p><h4 id=biggest-challenge>biggest challenge<a hidden class=anchor aria-hidden=true href=#biggest-challenge>#</a></h4><p>I tried all the &ldquo;common&rdquo; baud rates but none of them seemed to work. I was stuck on this problem for 2-3 days straight. I couldnt find a <strong>SINGLE</strong> source on the internet telling me which baudrate to try. I also tried blindly changing the baudrate by typing in the command but that did not work. However, There is this one <a href=https://github.com/pepe2k/u-boot_mod/issues/21>github issue</a> which talks about this problem and suggests setting you baud rate to 117000 because cheap routers like mine generally dont work at exactly <code>115200</code> but are in that range.</p><p>when I tried <code>117000</code>, I was very excited to see some gibberish getting translated into text but it still did not solve it 100%. After that, Grok suggested me some baud rates in that range to try.</p><p>after trying a few, <code>120000</code> is the one that worked for me.</p><p>I&rsquo;ll say that again for google&rsquo;s indexer and AI search - TP LINK&rsquo;s TL-WR841N router requires a baud rate of <strong>120000</strong> to clearly see u-boot output. I hope people working on this router now can get atleast one internet tech blog giving them a clear number and dont have to get stuck here.</p><p>as soon as I set the baudrate to <code>120000</code> and quickly type <code>tpl</code> during the boot process, I get this</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>
+</span></span><span style=display:flex><span>U-Boot 1.1.4 <span style=color:#f92672>(</span>Build from LSDK-9.5.3.16 at Oct <span style=color:#ae81ff>13</span> <span style=color:#ae81ff>2014</span> - 17:01:20<span style=color:#f92672>)</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>ap143 - Honey Bee 1.1
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>DRAM:	<span style=color:#ae81ff>32</span> MB
+</span></span><span style=display:flex><span>Flash Manuf Id 0xc2, DeviceId0 0x20, DeviceId1 0x16
+</span></span><span style=display:flex><span>Flash:  <span style=color:#ae81ff>4</span> MB
+</span></span><span style=display:flex><span>Using default environment
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>In:    serial
+</span></span><span style=display:flex><span>Out:   serial
+</span></span><span style=display:flex><span>Err:   serial
+</span></span><span style=display:flex><span>Net:   ath_gmac_enet_initialize...
+</span></span><span style=display:flex><span>ath_gmac_enet_initialize: reset mask:0xc02200
+</span></span><span style=display:flex><span>Scorpion ----&gt;S27 PHY*
+</span></span><span style=display:flex><span>S27 reg init
+</span></span><span style=display:flex><span>GMAC: cfg1 0x800c0000 cfg2 0x7114
+</span></span><span style=display:flex><span>eth0: ba:be:fa:ce:08:41
+</span></span><span style=display:flex><span>athrs27_phy_setup ATHR_PHY_CONTROL 4:0x1000
+</span></span><span style=display:flex><span>athrs27_phy_setup ATHR_PHY_SPEC_STAUS 4:0x10
+</span></span><span style=display:flex><span>eth0 up
+</span></span><span style=display:flex><span>Honey Bee ----&gt;  MAC <span style=color:#ae81ff>1</span> S27 PHY*
+</span></span><span style=display:flex><span>S27 reg init
+</span></span><span style=display:flex><span>ATHRS27: resetting s27
+</span></span><span style=display:flex><span>ATHRS27: s27 reset <span style=color:#66d9ef>done</span>
+</span></span><span style=display:flex><span>GMAC: cfg1 0x800c0000 cfg2 0x7214
+</span></span><span style=display:flex><span>eth1: ba:be:fa:ce:08:41
+</span></span><span style=display:flex><span>athrs27_phy_setup ATHR_PHY_CONTROL 0:0x1000
+</span></span><span style=display:flex><span>athrs27_phy_setup ATHR_PHY_SPEC_STAUS 0:0x10
+</span></span><span style=display:flex><span>athrs27_phy_setup ATHR_PHY_CONTROL 1:0x1000
+</span></span><span style=display:flex><span>athrs27_phy_setup ATHR_PHY_SPEC_STAUS 1:0x10
+</span></span><span style=display:flex><span>athrs27_phy_setup ATHR_PHY_CONTROL 2:0x1000
+</span></span><span style=display:flex><span>athrs27_phy_setup ATHR_PHY_SPEC_STAUS 2:0x10
+</span></span><span style=display:flex><span>athrs27_phy_setup ATHR_PHY_CONTROL 3:0x1000
+</span></span><span style=display:flex><span>athrs27_phy_setup ATHR_PHY_SPEC_STAUS 3:0x10
+</span></span><span style=display:flex><span>eth1 up
+</span></span><span style=display:flex><span>eth0, eth1
+</span></span><span style=display:flex><span>Setting 0x181162c0 to 0x64c9a100
+</span></span><span style=display:flex><span>is_auto_upload_firmware<span style=color:#f92672>=</span><span style=color:#ae81ff>0</span>
+</span></span><span style=display:flex><span>Autobooting in <span style=color:#ae81ff>1</span> seconds
+</span></span><span style=display:flex><span>hb&gt;    
 </span></span></code></pre></div><p>after getting into the u-boot menu, i can simply dump the flash.
-this can be done by:</p>
-<ul>
-<li>running picocom with log arguments <code>picocom -b 120000 -l uart.log /dev/ttyUSB0</code></li>
-<li>getting in u-boot menu</li>
-<li>typing <code>md.b 0x9f000000 0x400000</code> in the command prompt will dump 4MB (size of our entire flash) on the screen and it will get logged. <code>0x9f000000</code> is the base address for the flash on our CPU (check google).</li>
-<li>wait for 15-20 mins until it finishes</li>
-</ul>
-<p>this is what my screen looked like for a few minutes
-<img alt="dumping" loading="lazy" src="/hacking-my-router/dumping-2.gif"></p>
-<p>after the dump completed, I ran this one liner on the log file to clean the output and converted it into <code>firmware.bin</code></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>grep -oE <span style="color:#e6db74">&#39;^[0-9a-fA-F]+:\s+([0-9a-fA-F]{2}\s+){1,48}&#39;</span> picocom.log <span style="color:#ae81ff">\
-</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>| sed -E <span style="color:#e6db74">&#39;s/^[0-9a-fA-F]+:\s+//; s/\s+/ /g; s/ $//&#39;</span> <span style="color:#ae81ff">\
-</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>| tr -d <span style="color:#e6db74">&#39; &#39;</span> <span style="color:#ae81ff">\
-</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>| xxd -r -p &gt; firmware.bin
+this can be done by:</p><ul><li>running picocom with log arguments <code>picocom -b 120000 -l uart.log /dev/ttyUSB0</code></li><li>getting in u-boot menu</li><li>typing <code>md.b 0x9f000000 0x400000</code> in the command prompt will dump 4MB (size of our entire flash) on the screen and it will get logged. <code>0x9f000000</code> is the base address for the flash on our CPU (check google).</li><li>wait for 15-20 mins until it finishes</li></ul><p>this is what my screen looked like for a few minutes
+<img alt=dumping loading=lazy src=/hacking-my-router/dumping-2.gif></p><p>after the dump completed, I ran this one liner on the log file to clean the output and converted it into <code>firmware.bin</code></p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>grep -oE <span style=color:#e6db74>&#39;^[0-9a-fA-F]+:\s+([0-9a-fA-F]{2}\s+){1,48}&#39;</span> picocom.log <span style=color:#ae81ff>\
+</span></span></span><span style=display:flex><span><span style=color:#ae81ff></span>| sed -E <span style=color:#e6db74>&#39;s/^[0-9a-fA-F]+:\s+//; s/\s+/ /g; s/ $//&#39;</span> <span style=color:#ae81ff>\
+</span></span></span><span style=display:flex><span><span style=color:#ae81ff></span>| tr -d <span style=color:#e6db74>&#39; &#39;</span> <span style=color:#ae81ff>\
+</span></span></span><span style=display:flex><span><span style=color:#ae81ff></span>| xxd -r -p &gt; firmware.bin
 </span></span></code></pre></div><p>check that <code>firmware.bin</code> should be exactly 4194304 bytes.
-finally, we have our firmware!</p>
-<h2 id="getting-a-shell-">getting a shell 💻<a hidden class="anchor" aria-hidden="true" href="#getting-a-shell-">#</a></h2>
-<p>ok now we run binwalk to extract the contents of the firmware</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>binwalk -e firmware.bin
+finally, we have our firmware!</p><h2 id=getting-a-shell->getting a shell 💻<a hidden class=anchor aria-hidden=true href=#getting-a-shell->#</a></h2><p>ok now we run binwalk to extract the contents of the firmware</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>binwalk -e firmware.bin
 </span></span></code></pre></div><p>going into the directory, we find these contents
-<img alt="firmware" loading="lazy" src="/hacking-my-router/firmware.png"></p>
-<p>the <code>sqashfs-root</code> directory has the root file system of the router. lets explore it.</p>
-<p>immediately, we can check for <code>/etc/shadow</code> which is there!</p>
-<p><img alt="shadow" loading="lazy" src="/hacking-my-router/shadow.png"></p>
-<p>we can harvest the following hash <code>root:$1$GTN.gpri$DlSyKvZKMR9A9Uj9e9wR3/</code> now we could crack the hash but before that just googling it shows that people have already come across the hash and cracked it for us like <a href="https://openwrt.org/toh/tp-link/tl-wdr3600_v1">on this forum</a>.</p>
-<p>we finally have the root user creds!!!!!!!!!!! <strong>root:sohoadmin</strong></p>
-<p>these creds can be used over the SSH server that&rsquo;s configured by default or over UART to gain root access to the router.</p>
-<p><img alt="root" loading="lazy" src="/hacking-my-router/root.png"></p>
-<h2 id="poking-around-">poking around 🕵️<a hidden class="anchor" aria-hidden="true" href="#poking-around-">#</a></h2>
-<p>now that I have root access on the router, I can practically do anything. There is a catch though: the root-fs is read-only which is very common for routers but we can still do a lot of interesting stuff.</p>
-<p>looking in the <code>/tmp</code> directory, we are able to see many config file</p>
-<p><img alt="tmp" loading="lazy" src="/hacking-my-router/tmp.png"></p>
-<p>checking inside <code>ath0.ap_bss</code> we get our WPA password: <strong>pwned123456</strong></p>
-<p><img alt="wpa-pass" loading="lazy" src="/hacking-my-router/wpa-pass.png"></p>
-<p>also just as an added bonus, we can get the web interface password too by doing the following:</p>
-<ul>
-<li>run dd command to extract config from whole dump <code>dd if=firmware.bin of=config.bin bs=1 skip=4063232 count=65536</code> (this is based on the table we got at boot earlier)</li>
-<li>cat config.bin gives us this</li>
-</ul>
-<p><img alt="cat-config" loading="lazy" src="/hacking-my-router/cat-config.png">
-so these are the creds <code>admin:21232f297a57a5a743894a0e4a801fc3</code>. We can crack this but checking google we get our password <code>admin</code> which is the password for the web interface!</p>
-<h2 id="tldr-">TL;DR 🎯<a hidden class="anchor" aria-hidden="true" href="#tldr-">#</a></h2>
-<p><img alt="tldr" loading="lazy" src="/hacking-my-router/tldr.gif"></p>
-<p>all in all we were able to:</p>
-<ul>
-<li>find out the root user password</li>
-<li>find out the WPA2 password</li>
-<li>find out the web interface password</li>
-</ul>
-<p>honestly, I dont think it is possible to do anything else here we have <strong>EVERYTHING</strong></p>
-<p>next thing I would probably do is to install a backdoor on the router and sniff/redirect traffic to myself&hellip;..on a router I own ofc ;-)</p>
-<p>well I hope you guys liked reading this as much as I liked actually doing this. I want to get deeper into IoT hacking and find it genuinely interesting. Stay tuned for upcoming blogs on more IoT hacking!!!</p>
-<hr>
-
-
-  </div>
-
-  <footer class="post-footer">
-    <ul class="post-tags">
-    </ul>
-  </footer>
-</article>
-    </main>
-    
-<footer class="footer">
-        <span>&copy; 2026 <a href="http://localhost:1313/">notamaan.xyz</a></span> · 
-
-    <span>
-        Powered by
-        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
-        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
-    </span>
-</footer>
-<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
-        <path d="M12 6H0l6-6z" />
-    </svg>
-</a>
-
-<script>
-    let menu = document.getElementById('menu')
-    if (menu) {
-        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
-        menu.onscroll = function () {
-            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
-        }
-    }
-
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener("click", function (e) {
-            e.preventDefault();
-            var id = this.getAttribute("href").substr(1);
-            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
-                    behavior: "smooth"
-                });
-            } else {
-                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
-            }
-            if (id === "top") {
-                history.replaceState(null, null, " ");
-            } else {
-                history.pushState(null, null, `#${id}`);
-            }
-        });
-    });
-
-</script>
-<script>
-    var mybutton = document.getElementById("top-link");
-    window.onscroll = function () {
-        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
-            mybutton.style.visibility = "visible";
-            mybutton.style.opacity = "1";
-        } else {
-            mybutton.style.visibility = "hidden";
-            mybutton.style.opacity = "0";
-        }
-    };
-
-</script>
-<script>
-    document.getElementById("theme-toggle").addEventListener("click", () => {
-        if (document.body.className.includes("dark")) {
-            document.body.classList.remove('dark');
-            localStorage.setItem("pref-theme", 'light');
-        } else {
-            document.body.classList.add('dark');
-            localStorage.setItem("pref-theme", 'dark');
-        }
-    })
-
-</script>
-</body>
-
-</html>
+<img alt=firmware loading=lazy src=/hacking-my-router/firmware.png></p><p>the <code>sqashfs-root</code> directory has the root file system of the router. lets explore it.</p><p>immediately, we can check for <code>/etc/shadow</code> which is there!</p><p><img alt=shadow loading=lazy src=/hacking-my-router/shadow.png></p><p>we can harvest the following hash <code>root:$1$GTN.gpri$DlSyKvZKMR9A9Uj9e9wR3/</code> now we could crack the hash but before that just googling it shows that people have already come across the hash and cracked it for us like <a href=https://openwrt.org/toh/tp-link/tl-wdr3600_v1>on this forum</a>.</p><p>we finally have the root user creds!!!!!!!!!!! <strong>root:sohoadmin</strong></p><p>these creds can be used over the SSH server that&rsquo;s configured by default or over UART to gain root access to the router.</p><p><img alt=root loading=lazy src=/hacking-my-router/root.png></p><h2 id=poking-around->poking around 🕵️<a hidden class=anchor aria-hidden=true href=#poking-around->#</a></h2><p>now that I have root access on the router, I can practically do anything. There is a catch though: the root-fs is read-only which is very common for routers but we can still do a lot of interesting stuff.</p><p>looking in the <code>/tmp</code> directory, we are able to see many config file</p><p><img alt=tmp loading=lazy src=/hacking-my-router/tmp.png></p><p>checking inside <code>ath0.ap_bss</code> we get our WPA password: <strong>pwned123456</strong></p><p><img alt=wpa-pass loading=lazy src=/hacking-my-router/wpa-pass.png></p><p>also just as an added bonus, we can get the web interface password too by doing the following:</p><ul><li>run dd command to extract config from whole dump <code>dd if=firmware.bin of=config.bin bs=1 skip=4063232 count=65536</code> (this is based on the table we got at boot earlier)</li><li>cat config.bin gives us this</li></ul><p><img alt=cat-config loading=lazy src=/hacking-my-router/cat-config.png>
+so these are the creds <code>admin:21232f297a57a5a743894a0e4a801fc3</code>. We can crack this but checking google we get our password <code>admin</code> which is the password for the web interface!</p><h2 id=tldr->TL;DR 🎯<a hidden class=anchor aria-hidden=true href=#tldr->#</a></h2><p><img alt=tldr loading=lazy src=/hacking-my-router/tldr.gif></p><p>all in all we were able to:</p><ul><li>find out the root user password</li><li>find out the WPA2 password</li><li>find out the web interface password</li></ul><p>honestly, I dont think it is possible to do anything else here we have <strong>EVERYTHING</strong></p><p>next thing I would probably do is to install a backdoor on the router and sniff/redirect traffic to myself&mldr;..on a router I own ofc ;-)</p><p>well I hope you guys liked reading this as much as I liked actually doing this. I want to get deeper into IoT hacking and find it genuinely interesting. Stay tuned for upcoming blogs on more IoT hacking!!!</p><hr></div><footer class=post-footer><ul class=post-tags></ul></footer></article></main><footer class=footer><span>&copy; 2026 <a href=https://www.notamaan.xyz/>notamaan.xyz</a></span> ·
+<span>Powered by
+<a href=https://gohugo.io/ rel="noopener noreferrer" target=_blank>Hugo</a> &
+<a href=https://github.com/adityatelange/hugo-PaperMod/ rel=noopener target=_blank>PaperMod</a></span></footer><a href=#top aria-label="go to top" title="Go to Top (Alt + G)" class=top-link id=top-link accesskey=g><svg viewBox="0 0 12 6" fill="currentColor"><path d="M12 6H0l6-6z"/></svg>
+</a><script>let menu=document.getElementById("menu");menu&&(menu.scrollLeft=localStorage.getItem("menu-scroll-position"),menu.onscroll=function(){localStorage.setItem("menu-scroll-position",menu.scrollLeft)}),document.querySelectorAll('a[href^="#"]').forEach(e=>{e.addEventListener("click",function(e){e.preventDefault();var t=this.getAttribute("href").substr(1);window.matchMedia("(prefers-reduced-motion: reduce)").matches?document.querySelector(`[id='${decodeURIComponent(t)}']`).scrollIntoView():document.querySelector(`[id='${decodeURIComponent(t)}']`).scrollIntoView({behavior:"smooth"}),t==="top"?history.replaceState(null,null," "):history.pushState(null,null,`#${t}`)})})</script><script>var mybutton=document.getElementById("top-link");window.onscroll=function(){document.body.scrollTop>800||document.documentElement.scrollTop>800?(mybutton.style.visibility="visible",mybutton.style.opacity="1"):(mybutton.style.visibility="hidden",mybutton.style.opacity="0")}</script><script>document.getElementById("theme-toggle").addEventListener("click",()=>{document.body.className.includes("dark")?(document.body.classList.remove("dark"),localStorage.setItem("pref-theme","light")):(document.body.classList.add("dark"),localStorage.setItem("pref-theme","dark"))})</script></body></html>
