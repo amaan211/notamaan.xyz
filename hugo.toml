@@ -44,6 +44,11 @@ theme = "PaperMod"
   url = "/posts/"
   weight = 2
 
+[[menu.main]]
+  name = "check out version 2"
+  url = "/v2/"
+  weight = 3
+
 
 [outputs]
 home = ["HTML", "RSS"]

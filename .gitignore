@@ -1,0 +1,8 @@
+# Hugo build/runtime artifacts
+public.old/
+public.staging/
+resources/
+.hugo_build.lock
+
+# local backup copies
+*.v1bak

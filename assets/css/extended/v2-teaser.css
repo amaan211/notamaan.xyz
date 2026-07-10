@@ -1,0 +1,30 @@
+/* "check out version 2" nav item — deliberately styled in the v2 (hack.css) look:
+   green, monospace, terminal-style box, so it teases the new theme it leads to. */
+/* the nav is a flex row whose items stretch to full height; let this compact
+   chip center itself vertically instead of pinning to the top */
+#menu li:last-child {
+    align-self: center;
+}
+#menu a[href$="/v2/"] {
+    font-family: ui-monospace, Menlo, Monaco, "Cascadia Code", "Courier New", monospace;
+    font-size: 0.78rem;
+    line-height: 1.2;
+    border: 1px solid #33cc33;
+    border-radius: 4px;
+    padding: 2px 7px;
+    transition: background 0.15s ease, color 0.15s ease;
+}
+#menu a[href$="/v2/"] span {
+    color: #33cc33;
+}
+#menu a[href$="/v2/"] span::before {
+    content: "$ ";
+    opacity: 0.8;
+}
+#menu a[href$="/v2/"]:hover {
+    background: #33cc33;
+}
+#menu a[href$="/v2/"]:hover span,
+#menu a[href$="/v2/"]:hover span::before {
+    color: #0a0a0a;
+}

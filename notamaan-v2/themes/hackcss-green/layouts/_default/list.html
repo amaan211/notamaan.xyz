@@ -1,0 +1,24 @@
+{{ define "main" }}
+  <header>
+    <h1>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ .Title }}{{ end }}</h1>
+  </header>
+
+  {{ if .Content }}
+  <div class="content">
+    {{ .Content }}
+  </div>
+  {{ end }}
+
+  {{ $pages := where site.RegularPages "Section" "posts" }}
+  {{ if .IsHome }}
+    {{ range first 2 $pages }}
+      {{ partial "post-summary.html" . }}
+    {{ end }}
+    <nav class="readmore"><a itemprop="url" href="{{ "/posts/" | relURL }}">All posts&nbsp;&raquo;</a></nav>
+  {{ else }}
+    {{ $paginator := .Paginate $pages }}
+    {{ range $paginator.Pages }}
+      {{ partial "post-summary.html" . }}
+    {{ end }}
+  {{ end }}
+{{ end }}

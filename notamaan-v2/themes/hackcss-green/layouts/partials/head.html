@@ -1,0 +1,19 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ .Title }} · {{ site.Title }}{{ end }}</title>
+<meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ with .Summary }}{{ . }}{{ else }}{{ site.Params.description }}{{ end }}{{ end }}">
+{{ with site.Params.author }}<meta name="author" content="{{ . }}">{{ end }}
+
+<meta property="og:title" content="{{ if .IsHome }}{{ site.Title }}{{ else }}{{ .Title }}{{ end }}" />
+<meta property="og:description" content="{{ with .Description }}{{ . }}{{ else }}{{ with .Summary }}{{ . }}{{ else }}{{ site.Params.description }}{{ end }}{{ end }}" />
+<meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}" />
+<meta property="og:url" content="{{ .Permalink }}" />
+<meta name="twitter:card" content="summary" />
+
+{{ with .OutputFormats.Get "rss" }}
+<link href="{{ .RelPermalink }}" rel="alternate" type="application/rss+xml" title="{{ site.Title }}" />
+{{ end }}
+<link rel="canonical" href="{{ .Permalink }}">
+<link rel="icon" sizes="any" href="{{ "img/favicon.ico" | relURL }}">
+<meta name="theme-color" content="#000">
+<link rel="stylesheet" href="{{ "css/style.css" | relURL }}">

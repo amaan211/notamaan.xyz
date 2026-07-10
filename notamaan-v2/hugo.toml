@@ -1,0 +1,31 @@
+baseURL = "https://www.notamaan.xyz/"
+languageCode = "en-us"
+title = "notamaan.xyz"
+theme = "hackcss-green"
+enableRobotsTXT = true
+
+[pagination]
+  pagerSize = 10
+
+[params]
+  author = "Amaan Khan"
+  description = "Personal website of Amaan Khan — cybersecurity engineer."
+  # URL of the original PaperMod ("classic") site. Root of the domain by default.
+  classicURL = "/"
+
+[[menu.main]]
+  name = "Home"
+  url = "/"
+  weight = 1
+
+[[menu.main]]
+  name = "Posts"
+  url = "/posts/"
+  weight = 2
+
+[markup]
+  [markup.highlight]
+    noClasses = false
+    style = "monokai"
+  [markup.goldmark.renderer]
+    unsafe = true

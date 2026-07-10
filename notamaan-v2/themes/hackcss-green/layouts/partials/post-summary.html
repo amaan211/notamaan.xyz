@@ -1,0 +1,15 @@
+<article itemscope itemtype="http://schema.org/CreativeWork">
+  <header>
+    <h2 itemprop="name">
+      <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+    </h2>
+    <p class="muted">{{ partial "post-meta.html" . }}</p>
+  </header>
+
+  <blockquote itemprop="headline">{{ with .Params.summary }}{{ . }}{{ else }}{{ .Summary | plainify | truncate 300 }}{{ end }}</blockquote>
+
+  <nav class="readmore"><a itemprop="url" href="{{ .RelPermalink }}">Read More&nbsp;&raquo;</a></nav>
+
+  <meta itemprop="inLanguage" content="{{ site.LanguageCode | default "en-US" }}">
+  <meta itemprop="datePublished" content="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
+</article>

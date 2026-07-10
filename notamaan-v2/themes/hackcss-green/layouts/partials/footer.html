@@ -1,0 +1,13 @@
+<footer>
+  {{ if eq .Kind "section" }}
+  {{ $p := .Paginator }}
+  <nav>
+    <p>
+      {{ if $p.HasPrev }}<a href="{{ $p.Prev.URL }}">&laquo; Prev</a> | {{ end }}
+      <span>Page {{ $p.PageNumber }} of {{ $p.TotalPages }}</span>
+      {{ if $p.HasNext }} | <a href="{{ $p.Next.URL }}">Next &raquo;</a>{{ end }}
+    </p>
+  </nav>
+  {{ end }}
+  <p class="muted">&copy; {{ now.Year }} {{ site.Title }} &mdash; built with <a href="https://gohugo.io/" rel="external">Hugo</a></p>
+</footer>
